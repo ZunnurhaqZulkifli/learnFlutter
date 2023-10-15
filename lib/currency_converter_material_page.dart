@@ -23,6 +23,12 @@ class _CurrencyConverterMaterialPage
   }
 
   @override
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     print('rebuilt');
     final border = OutlineInputBorder(
