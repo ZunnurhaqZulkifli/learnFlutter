@@ -1,28 +1,37 @@
 import 'package:flutter/material.dart';
 
 class HumidityLevels extends StatelessWidget {
-  const HumidityLevels({super.key});
+  final IconData icon;
+  final String label;
+  final String value;
+
+  const HumidityLevels({
+    super.key,
+    required this.label,
+    required this.icon,
+    required this.value,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
         Icon(
-          Icons.water_drop,
+          icon,
           size: 30,
         ),
-        SizedBox(height: 5),
+        const SizedBox(height: 5),
         Text(
-          'Humidity',
-          style: TextStyle(
+          label,
+          style: const TextStyle(
             fontWeight: FontWeight.normal,
             fontSize: 16,
           ),
         ),
-        SizedBox(height: 2),
+        const SizedBox(height: 2),
         Text(
-          '100 %',
-          style: TextStyle(
+          value,
+          style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20,
           ),
