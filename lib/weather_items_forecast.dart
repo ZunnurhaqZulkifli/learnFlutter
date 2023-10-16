@@ -18,7 +18,7 @@ class HourlyForeCastItem extends StatelessWidget {
       child: Card(
         elevation: 10,
         child: Container(
-          width: 105,
+          width: 100,
           padding: const EdgeInsets.all(8.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
@@ -31,6 +31,8 @@ class HourlyForeCastItem extends StatelessWidget {
                   fontSize: 12,
                   fontWeight: FontWeight.bold,
                 ),
+                maxLines: 1,
+                // overflow: TextOverflow.visible,
               ),
               const SizedBox(height: 10),
               Icon(
